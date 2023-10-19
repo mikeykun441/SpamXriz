@@ -20,7 +20,7 @@ from RiZoeLX.functions import get_time, delete_reply, Red7_Watch as oops_watch
 async def ping(_, e: Message):       
       start = datetime.datetime.now()
       uptime = await get_time((time.time() - start_time))
-      pong_msg = await e.reply("**Pong !!**")
+      pong_msg = await e.reply("**loda !!**")
       end = datetime.datetime.now()
       ms = (end-start).microseconds / 1000
       await pong_msg.edit_text(f"⌾ {ping_msg} ⌾ \n\n ༝ ᴘɪɴɢ: `{ms}` ᴍs \n ༝ ᴜᴘᴛɪᴍᴇ: `{uptime}` \n ༝ ᴠᴇʀsɪᴏɴ: `{__version__}`")
@@ -30,9 +30,9 @@ async def ping_me(_, e: Message):
       start = datetime.datetime.now()
       uptime = await get_time((time.time() - start_time))
       try:
-        pong_msg = await e.edit_text("**Pong !!**")
+        pong_msg = await e.edit_text("**loda !!**")
       except:
-        pong_msg = await e.reply("**Pong !!**")
+        pong_msg = await e.reply("**loda !!**")
         await e.delete()    
       end = datetime.datetime.now()
       ms = (end-start).microseconds / 1000
@@ -74,7 +74,7 @@ async def welcome_watcher(SpamX: Client, member: ChatMemberUpdated):
    user = member.new_chat_member.user if member.new_chat_member else member.from_user    
    if group_welcome:
       if user.id == mai.id:
-         await SpamX.send_message(message.chat.id, "SpamX Here. Powered by @RiZoeLX!")
+         await SpamX.send_message(message.chat.id, "SpamX Here. Powered by @sahenshah01!")
          return
       if user.id == Owner:
          await SpamX.send_message(message.chat.id, f"{user.mention} Welcome to {message.chat.title} my King 👑")
@@ -126,7 +126,7 @@ async def os_system(SpamX: Client, message: Message):
        if check_var in Variables:
           var = check_var
        else:
-          await message.reply_text(f"Wrong variable! All Variables given below 👇\n\n {Variables_text} \n\n © @RiZoeLX")
+          await message.reply_text(f"Wrong variable! All Variables given below 👇\n\n {Variables_text} \n\n © @sahenshah01")
           return
        value = str(txt[1])
        try:
@@ -136,6 +136,6 @@ async def os_system(SpamX: Client, message: Message):
          os.execl(sys.executable, *args)
          quit()
        except Exception as error:
-         await message.reply_text(f"Error: {error} \n\n Report in @DNHxHELL")
+         await message.reply_text(f"Error: {error} \n\n Report in @billaganghh")
     else:
        await message.reply_text(f"**Wrong Usage** \n Syntax: {handler}setvar (var name) (value) \n\n Type `{handler}getvars` To get all Vars name!")
