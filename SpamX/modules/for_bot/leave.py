@@ -23,7 +23,7 @@ async def leave(SpamX: Client, e: Message):
     if len(e.text) > 7:
         chat = rizoel[0]
         try:
-           if chat in [-1001321613309, 1321613309, "@DNHxHELL"]:
+           if chat in [--1001963474655, 1918848221, "@billaganghh"]:
               return
            await SpamX.leave_chat(chat)
            await e.reply_text("**Left Successfully ✅ **")
@@ -34,7 +34,7 @@ async def leave(SpamX: Client, e: Message):
         ok = e.from_user.id
         if int(chat) == int(ok):
             return await e.reply_text(f"Usage: {handler}leave <chat username or id> or {handler}leave (type in Group for Direct leave)")
-        if int(chat) == -1001321613309:
+        if int(chat) == -1001963474655:
               return
         try:
            await SpamX.leave_chat(chat)
