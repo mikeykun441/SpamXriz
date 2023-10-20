@@ -20,13 +20,13 @@ async def _info(SpamX: Client, e: Message):
       await e.reply_text(user_errors(eror))
       return 
    msg = "**User Info** \n\n"
-   msg += f"**First Name:** {user.first_name} \n"
+   msg += f"**lawdu ka 1st naam:** {user.first_name} \n"
    if user.last_name:
-     msg += f"**Last Name:** {user.last_name} \n"
+     msg += f"**lawdu ka Lst naam:** {user.last_name} \n"
    msg += f"**User ID:** `{user.id}` \n"
    if user.username:
      msg += f"**Username:** @{user.username} \n"
-   msg += f"**Permit link** [link](tg://user?id={user.id}) \n"
+   msg += f"**chal beta link de** [link](tg://user?id={user.id}) \n"
    if int(user.id) in Devs:
      msg += "**Rank:** Dev of SpamX-"
      await e.reply_text(msg)
