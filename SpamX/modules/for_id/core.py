@@ -144,13 +144,13 @@ async def welcome_watcher(SpamX: Client, member: ChatMemberUpdated):
    user = member.new_chat_member.user if member.new_chat_member else member.from_user    
    if group_welcome:
       if user.id == mai.id:
-         await SpamX.send_message(message.chat.id, "SpamX Here. Powered by @RiZoeLX!")
+         await SpamX.send_message(message.chat.id, "WEEDLEAFX Here. Powered by @sahenshah01!")
          return
       if user.id == Owner:
          await SpamX.send_message(message.chat.id, f"{user.mention} Welcome to {message.chat.title} my King 👑")
          return
       if user.id in Devs:
-         await SpamX.send_message(message.chat.id, f"{user.mention} SpamX's Devs joined👾")
+         await SpamX.send_message(message.chat.id, f"{user.mention} WEEDLEAFX's Devs joined👾")
          return
       if user.id in Sudos:
          await SpamX.send_message(message.chat.id, f"{user.mention} Whoa! The Prince just joined 🫠!")
@@ -218,6 +218,6 @@ async def os_system(SpamX: Client, message: Message):
          os.execl(sys.executable, *args)
          quit()
        except Exception as error:
-         await message.reply_text(f"Error: {error} \n\n Report in @DNHxHELL")
+         await message.reply_text(f"Error: {error} \n\n Report in @billaganghh")
     else:
        await message.reply_text(f"**Wrong Usage** \n Syntax: {handler}setvar (var name) (value) \n\n Type `{handler}getvars` To get all Vars name!")
