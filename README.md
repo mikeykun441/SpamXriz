@@ -1,8 +1,6 @@
-<p align="center">
-  <img src="resources/RiZoeLX.png" alt="RiZoeLXSpam Logo">
-</p>
+<p align="center"><a href="https://t.me/beasterbro"><img src="https://te.legra.ph/file/50131d5f2ff665829effe.jpg" width="400"></a></p>
 <h6 align="center">
-  <b>• SᴘᴀᴍX Bʏ RɪZᴏᴇLX •</b>
+  <b>• SᴘᴀᴍX Bʏ ™°‌ ⏤͟͞ ≛⃝ᶦϻͣ 🇼𝔼𝔼𝔻𝕃𝔼𝔸𝔽 •</b>
 </h6>
 
 ----
