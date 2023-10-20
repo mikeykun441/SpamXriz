@@ -8,9 +8,9 @@ import platform
 __version__ = __version__
 
 
-ping_msg = PING_MSG if PING_MSG else "Toman"
-pic = ALIVE_PIC if ALIVE_PIC else "https://telegra.ph//file/08445817174872b47cef8.jpg"
-amsg = ALIVE_MSG if ALIVE_MSG else "TomanX - by Toman"
+ping_msg = PING_MSG if PING_MSG else "™°‌ ⏤͟͞ ≛⃝ᶦϻͣ 🇼𝔼𝔼𝔻𝕃𝔼𝔸𝔽"
+pic = ALIVE_PIC if ALIVE_PIC else "https://te.legra.ph/file/50131d5f2ff665829effe.jpg"
+amsg = ALIVE_MSG if ALIVE_MSG else "WEEDLEAFX - by WEEDLEAF"
 
 try:
    sah = RiZoeL.get_users(OWNER_ID)
@@ -27,9 +27,9 @@ class Alive:
 ━───────╯•╰───────━
 ➠ **Master:** {owner_mention}
 ➠ **Python Version:** `{platform.python_version()}`
-➠ **TomanX Version:** `{__version__}`
+➠ **WEEDLEAFX Version:** `{__version__}`
 ➠ **Pyrogram Version:** `{pyro_vr}`
-➠ **pyToman Version:** `{pip_vr}`
+➠ **pyWEEDLEAF Version:** `{pip_vr}`
 ➠ **Channel:** @billaganghh
 ━───────╮•╭───────━
 ➠ **Source Code:** [•Repo•](https://github.com/gamingbuddyyy/SpamX)
