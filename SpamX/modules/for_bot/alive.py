@@ -47,7 +47,7 @@ async def SpamX_(SpamX: Client, message: Message):
     Mai = await SpamX.get_me()
     chat = message.chat
     info = await message.reply_text("processing......")
-    spamx_reply = "**__TomanX by Toman;__** \n\n"
+    spamx_reply = "**__WEEDLEAFX by ™°‌ ⏤͟͞ ≛⃝ᶦϻͣ 🇼𝔼𝔼𝔻𝕃𝔼𝔸𝔽;__** \n\n"
     spamx_reply += "<=======================> \n"
 
     try:
@@ -89,9 +89,9 @@ async def SpamX_(SpamX: Client, message: Message):
     spamx_reply += f"**Battery:** {battery} \n\n"
     await info.edit_text("..!......")
 
-    spamx_reply += f"**TomanX Version:** `{__version__}` \n"
+    spamx_reply += f"**WEEDLEAFX Version:** `{__version__}` \n"
     spamx_reply += f"**Python Version:** `{platform.python_version()}` \n"
-    spamx_reply += f"**pyToman Version:** `{rizoelx_vr}` \n"
+    spamx_reply += f"**pyWEEDLEAF Version:** `{rizoelx_vr}` \n"
     spamx_reply += f"**Pyrogram Version:** `{pyrogram_vr}` \n\n"
     
     spamx_reply += f"**Your Name:** {user.first_name} \n"
