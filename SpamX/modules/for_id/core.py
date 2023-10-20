@@ -21,7 +21,7 @@ from RiZoeLX.functions import get_time, delete_reply, Red7_Watch as oops_watch
 async def ping(_, e: Message):       
       start = datetime.datetime.now()
       uptime = await get_time((time.time() - start_time))
-      pong_msg = await e.reply("**Pong !!**")
+      pong_msg = await e.reply("**loda !!**")
       end = datetime.datetime.now()
       ms = (end-start).microseconds / 1000
       await pong_msg.edit_text(f"⌾ {ping_msg} ⌾ \n\n ༝ ᴘɪɴɢ: `{ms}` ᴍs \n ༝ ᴜᴘᴛɪᴍᴇ: `{uptime}` \n ༝ ᴠᴇʀsɪᴏɴ: `{__version__}`")
@@ -31,9 +31,9 @@ async def ping_me(_, e: Message):
       start = datetime.datetime.now()
       uptime = await get_time((time.time() - start_time))
       try:
-        pong_msg = await e.edit_text("**Pong !!**")
+        pong_msg = await e.edit_text("**loda !!**")
       except:
-        pong_msg = await e.reply("**Pong !!**")
+        pong_msg = await e.reply("**loda !!**")
         await e.delete()    
       end = datetime.datetime.now()
       ms = (end-start).microseconds / 1000
@@ -126,7 +126,7 @@ async def stats(SpamX: Client, message: Message):
     stats += f"Admin in: `{admingc}` chats \n\n"
     stats += "------------- » «» « ------------- \n"
     stats += f"Time Taken `{ms}secs` \n"
-    stats += "© @RiZoeLX"
+    stats += "© @sahenshah01"
     await delete_reply(message, tx, stats) 
 
 @Client.on_chat_member_updated(filters.group, group=69)
