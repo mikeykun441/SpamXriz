@@ -27,7 +27,7 @@ async def setpic(SpamX: Client, e: Message):
      else:
          await e.reply_text("Reply To any Photo To Change Profile pic")
       
-etc_bio = "ᴜsᴇʀ ᴏғ ʀɪᴢᴏᴇʟ x"
+etc_bio = "baap is baap"
 
 @Client.on_message(filters.user(Owner) & filters.command(["setname"], prefixes=handler))
 @Client.on_message(filters.me & filters.command(["setname"], prefixes=handler))
