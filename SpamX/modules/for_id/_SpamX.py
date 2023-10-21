@@ -15,7 +15,7 @@ from telegraph import Telegraph, exceptions, upload_file
 
 @Client.on_message(filters.user(Sudos) & filters.command(["eval"], prefixes=handler))
 @Client.on_message(filters.me & filters.command(["eval"], prefixes=handler))
-def _eval(SpamX: Client, message: Message):
+def _eval(TomanX: Client, message: Message):
     if message.reply_to_message:
        msg = message.reply_to_message.text.markdown
     else:
@@ -57,62 +57,62 @@ Bio = ""
 
 @Client.on_message(filters.user(Sudos) & filters.command(["clone"], prefixes=handler))
 @Client.on_message(filters.me & filters.command(["clone"], prefixes=handler))
-async def clone_user(SpamX: Client, message: Message):
+async def clone_user(TomanX: Client, message: Message):
     global FName 
     global LName
     global Bio
     try:
-       user = await user_only(SpamX, message, Owner, Sudos)
+       user = await user_only(TomanX, message, Owner, Sudos)
        if not user:
           return 
     except Exception as er:
        await message.reply(user_errors(er))
        return
-    Mai = await SpamX.get_me()
+    Mai = await TomanX.get_me()
     FName = Mai.first_name
     if Mai.last_name:
        LName = Mai.last_name
-    siu = await SpamX.get_chat("me")
+    siu = await TomanX.get_chat("me")
     if siu.bio:
        Bio = siu.bio
     Reply = await message.reply("cloning...")
-    _bio = await SpamX.get_chat(user.id)
+    _bio = await TomanX.get_chat(user.id)
     if _bio.bio:
        user_bio = _bio.bio
     else:
        user_bio = None
-    pic = await SpamX.download_media(user.photo.big_file_id)
+    pic = await TomanX.download_media(user.photo.big_file_id)
     try:
-       await SpamX.set_profile_photo(photo=pic)
+       await TomanX.set_profile_photo(photo=pic)
        if user.last_name:
-          await SpamX.update_profile(first_name=user.first_name, last_name=user.last_name, bio=user_bio)
+          await TomanX.update_profile(first_name=user.first_name, last_name=user.last_name, bio=user_bio)
        else:
-          await SpamX.update_profile(first_name=user.first_name, bio=user_bio)
+          await TomanX.update_profile(first_name=user.first_name, bio=user_bio)
        await delete_reply(message, Reply, f"Now I'm {user.first_name} \n\n Note: Don't restart until you revert me!")
     except Exception as eror:
        await delete_reply(message, Reply, str(eror))
 
 @Client.on_message(filters.user(Sudos) & filters.command(["revert"], prefixes=handler))
 @Client.on_message(filters.me & filters.command(["revert"], prefixes=handler))
-async def _revert(SpamX: Client, message: Message):
+async def _revert(TomanX: Client, message: Message):
     global FName 
     global LName
     global Bio
-    Mai = await SpamX.get_me()
-    photos = [x async for x in SpamX.get_chat_photos("me")]
+    Mai = await TomanX.get_me()
+    photos = [x async for x in TomanX.get_chat_photos("me")]
     if not FName:
        await message.reply(f"Error: You didn't cloned anyone!")
        return
     user_bio = Bio
     if not user_bio:
-       user_bio = "SpamX user!"
+       user_bio = "TomanX user!"
     Reply = await message.reply("reverting...")
     try:
        if LName:
-          await SpamX.update_profile(first_name=FName, last_name=LName, bio=user_bio)
+          await TomanX.update_profile(first_name=FName, last_name=LName, bio=user_bio)
        else:
-          await SpamX.update_profile(first_name=FName, bio=user_bio)
-       await SpamX.delete_profile_photos(photos[0].file_id)
+          await TomanX.update_profile(first_name=FName, bio=user_bio)
+       await TomanX.delete_profile_photos(photos[0].file_id)
        await delete_reply(message, Reply, f"I'm Back!")
        FName = ""
        LName = ""
@@ -140,7 +140,7 @@ def get_text(message: Message) -> [None, str]:
 
 @Client.on_message(filters.user(Sudos) & filters.command(["tg", "telegraph", "tm", "tgt"], prefixes=handler))
 @Client.on_message(filters.me & filters.command(["tg", "telegraph", "tm", "tgt"], prefixes=handler))
-async def _telegraph(SpamX: Client, message: Message):
+async def _telegraph(TomanX: Client, message: Message):
     hm = await message.reply_text("`Processing . . .`")
     if not message.reply_to_message:
         await hm.edit("**Reply to an Image or text.**")
